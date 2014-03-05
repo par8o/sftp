@@ -1,0 +1,6 @@
+{
+  "id": "sftpuser",
+  "password": "$1$9ZrtGbLX$jBnUY3Ptg6YljtFbb7/Gp.",
+  "groups": ["sftp"],
+  "shell": "/bin/false"
+}
