@@ -111,3 +111,6 @@ update_rubygems:
 rbenv_readme:
 	@echo Now type: 'eval "$$(rbenv init -)"'
 	@echo ..and add: 'eval "$$(rbenv init -)"' to you .bashrc
+
+publish:
+	knife cookbook site share sftp Networking -o ..
