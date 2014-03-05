@@ -21,7 +21,7 @@ end
 # Ensure correct permissions for chrooting sftp users:
 data_bag(:users).each do |user|
   user_item = data_bag_item('users', user)
-  if user_item['groups'] and user_item['groups'].include?('sftp')
+  if user_item and user_item['groups'] and user_item['groups'].include?('sftp')
     home = if user_item['home']
       user_item['home']
     else
