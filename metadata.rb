@@ -1,4 +1,4 @@
-name             'sftp_server'
+name             'sftp'
 maintainer       'Greg Albrecht'
 maintainer_email 'gba@onbeep.com'
 license          'Apache License, Version 2.0'

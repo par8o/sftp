@@ -1,9 +1,9 @@
-# Makefile for sftp_server Cookbook.
+# Makefile for sftp Cookbook.
 #
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
 # License:: Apache License, Version 2.0
-# Source:: https://github.com/OnBeep/cookbook-sftp_server
+# Source:: https://github.com/OnBeep/cookbook-sftp
 #
 
 

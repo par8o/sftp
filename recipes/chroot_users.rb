@@ -1,11 +1,11 @@
 # Adds and configures sftp chroot users.
 #
 # Recipe:: chroot_users
-# Cookbook:: sftp_server
+# Cookbook:: sftp
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
 # License:: Apache License, Version 2.0
-# Source:: https://github.com/OnBeep/cookbook-sftp_server
+# Source:: https://github.com/OnBeep/cookbook-sftp
 
 
 include_recipe 'users'
@@ -13,7 +13,7 @@ include_recipe 'users'
 
 # Add sftp users:
 users_manage 'sftp' do
-  group_id node['sftp_server']['sftp_group_id']
+  group_id node['sftp']['sftp_group_id']
   action [ :remove, :create ]
 end
 

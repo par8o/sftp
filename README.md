@@ -1,4 +1,4 @@
-# sftp_server-cookbook
+# sftp-cookbook
 
 Installs & Configures SFTP and chroot'd SFTP users.
 
@@ -16,7 +16,7 @@ Ubuntu
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['sftp_server']['sftp_group_id']</tt></td>
+    <td><tt>['sftp']['sftp_group_id']</tt></td>
     <td>String</td>
     <td>SFTP Chroot Group ID</td>
     <td><tt>2012</tt></td>
@@ -25,14 +25,14 @@ Ubuntu
 
 ## Usage
 
-### sftp_server::default
+### sftp::default
 
-Include `sftp_server` in your node's `run_list`:
+Include `sftp` in your node's `run_list`:
 
 ```json
 {
   "run_list": [
-    "recipe[sftp_server::default]"
+    "recipe[sftp::default]"
   ]
 }
 ```
@@ -60,4 +60,4 @@ Apache License, Version 2.0
 
 ## Source
 
-https://github.com/OnBeep/cookbook-sftp_server
+https://github.com/OnBeep/cookbook-sftp

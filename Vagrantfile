@@ -86,7 +86,7 @@ Vagrant.configure("2") do |config|
     }
 
     chef.run_list = [
-        "recipe[sftp_server::default]"
+        "recipe[sftp::default]"
     ]
   end
 end
