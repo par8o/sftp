@@ -2,13 +2,12 @@
 #
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
-# License:: All rights reserved. Do not redistribute.
+# License:: Apache License, Version 2.0
 # Source:: https://github.com/OnBeep/cookbook-sftp_server
 #
 
 
 .DEFAULT_GOAL := install
-
 
 
 test: install kitchen_test

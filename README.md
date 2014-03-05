@@ -1,10 +1,10 @@
 # sftp_server-cookbook
 
-TODO: Enter the cookbook description here.
+Installs & Configures SFTP and chroot'd SFTP users.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
+Ubuntu
 
 ## Attributes
 
@@ -16,10 +16,10 @@ TODO: List your supported platforms.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['sftp_server']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['sftp_server']['sftp_group_id']</tt></td>
+    <td>String</td>
+    <td>SFTP Chroot Group ID</td>
+    <td><tt>2012</tt></td>
   </tr>
 </table>
 
@@ -46,6 +46,18 @@ Include `sftp_server` in your node's `run_list`:
 5. Run the tests, ensuring they all pass
 6. Submit a Pull Request
 
-## License and Authors
+## Author
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Greg Albrecht (<gba@onbeep.com>)
+
+## Copyright
+
+Copyright 2014 OnBeep, Inc.
+
+## License
+
+Apache License, Version 2.0
+
+## Source
+
+https://github.com/OnBeep/cookbook-sftp_server
