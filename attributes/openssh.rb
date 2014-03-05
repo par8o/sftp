@@ -1,11 +1,11 @@
 # Attributes for SFTP chroot server.
 #
 # Attributes:: openssh
-# Cookbook:: sftp_server
+# Cookbook:: sftp
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
-# License:: All rights reserved. Do not redistribute.
-# Source:: https://github.com/OnBeep/cookbook-sftp_server
+# License:: Apache License, Version 2.0
+# Source:: https://github.com/OnBeep/cookbook-sftp
 #
 
 

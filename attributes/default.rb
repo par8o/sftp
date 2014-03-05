@@ -1,6 +1,6 @@
-# Installs & Configures SFTP chroot server.
+# default Attributes for SFTP chroot server.
 #
-# Recipe:: default
+# Attributes:: default
 # Cookbook:: sftp
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
@@ -9,6 +9,4 @@
 #
 
 
-include_recipe 'chef-solo-search'
-include_recipe 'openssh'
-include_recipe 'sftp::chroot_users'
+default['sftp']['sftp_group_id'] = 2012

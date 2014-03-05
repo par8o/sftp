@@ -2,8 +2,8 @@
 #
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
-# License:: All rights reserved. Do not redistribute.
-# Source:: https://github.com/OnBeep/cookbook-sftp_server
+# License:: Apache License, Version 2.0
+# Source:: https://github.com/OnBeep/cookbook-sftp
 #
 
 
@@ -32,3 +32,8 @@ end
 describe group('sftp') do
   it { should exist }
 end
+
+# Not currently testable...
+#describe file('/home/sftpuser/.ssh') do
+#  it { should_not exist }
+#end
