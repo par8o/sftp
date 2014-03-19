@@ -7,6 +7,9 @@ provisioner:
 
 platforms:
   - name: ubuntu-12.04
+    driver_config:
+      customize:
+        memory: 768
 
 suites:
   - name: default
