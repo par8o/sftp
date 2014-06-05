@@ -33,7 +33,10 @@ describe group('sftp') do
   it { should exist }
 end
 
-# Not currently testable...
-#describe file('/home/sftpuser/.ssh') do
-#  it { should_not exist }
-#end
+describe file('/home/sftpuser/.ssh/') do
+  it { should be_directory }
+end
+
+describe file('/home/sftpuser/.ssh/authorized_keys') do
+  it { should be_file }
+end
