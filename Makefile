@@ -3,8 +3,9 @@
 # Author:: Greg Albrecht <gba@onbeep.com>
 # Copyright:: Copyright 2014 OnBeep, Inc.
 # License:: Apache License, Version 2.0
-# Source:: https://github.com/OnBeep/cookbook-sftp
+# Source:: https://github.com/onbeep-cookbooks/sftp/
 #
+
 
 # Global/env vars:
 
@@ -14,6 +15,10 @@ BUNDLE_CMD ?= ~/.rbenv/shims/bundle
 
 BUNDLE_EXEC ?= bundle exec
 
+KNIFE_CONFIG ?= $(HOME)/.chef/knife.rb
+
+COOKBOOK_NAME ?= sftp
+
 
 # Target groups:
 
@@ -22,6 +27,7 @@ test: install foodcritic kitchen_test
 install: $(BUNDLE_CMD) bundle_install
 
 clean: kitchen_destroy
+	rm -rf build
 
 release: bump_version git_push_tags berks_upload
 
@@ -64,8 +70,12 @@ berks_upload: berks_install
 git_push_tags:
 	git push origin --tags
 
-
 # knife targets:
 
-publish:
-	knife cookbook site share sftp Networking -o ..
+publish: build_path
+	knife cookbook site share $(COOKBOOK_NAME) Networking -c $(KNIFE_CONFIG) -o build
+
+# Work-around for the CI's checkout/workspace path:
+build_path:
+	mkdir -p build
+	rsync --exclude=build/ -avr . build/$(COOKBOOK_NAME)
