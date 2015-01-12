@@ -37,8 +37,10 @@ data_bag(:users).each do |user|
       owner user_item['id']
     end
 
-    directory File.join(home, '.ssh') do
-      action :delete
+    unless user_item['ssh_keys']
+      directory File.join(home, '.ssh') do
+        action :delete
+      end
     end
   end
 end
