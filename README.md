@@ -50,6 +50,11 @@ Include `sftp` in your node's `run_list`:
 
 Author:: Greg Albrecht (<gba@onbeep.com>)
 
+## Contributors
+
+* Jacobo García López de Araujo https://github.com/therobot
+* Anthony Scalisi https://github.com/scalp42
+
 ## Copyright
 
 Copyright 2014 OnBeep, Inc.
