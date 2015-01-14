@@ -33,14 +33,12 @@ data_bag(:users).each do |user|
       group 'root'
     end
 
-    directory File.join(home, 'upload') do
+    directory File.join(home, node['sftp']['sftp_dropbox']) do
       owner user_item['id']
     end
 
-    unless user_item['ssh_keys']
-      directory File.join(home, '.ssh') do
-        action :delete
-      end
+    directory File.join(home, '.ssh') do
+      action user_item['ssh_keys'] ? :create : :delete
     end
   end
 end
