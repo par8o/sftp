@@ -10,3 +10,4 @@
 
 
 default['sftp']['sftp_group_id'] = 2012
+default['sftp']['sftp_dropbox'] = 'upload'
