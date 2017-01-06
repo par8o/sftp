@@ -1,3 +1,7 @@
+# Used 
+
+See https://github.com/par8o/chef-repo
+
 # sftp-cookbook
 
 Installs & Configures SFTP and chroot'd SFTP users.
